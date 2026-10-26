@@ -1,0 +1,27 @@
+{
+  "_readme": "Datasheet values the KiCad importer cannot read from the board files. volt2motion import-kicad uses parts.json in the current folder, or pass --parts. The guide at https://github.com/paperview/volt2motion/blob/main/docs/parts-table.md says where each value is on a datasheet. Keys must match the part's MPN field (or its Value if there is no MPN). The EXAMPLE parts are made-up values for the sample board, not real parts. Add your real MOSFETs from their datasheets, using the hot (100 C) column where a datasheet gives one for gate charge.",
+  "mosfets": {
+    "EXAMPLE-NFET-80V-2m5": {
+      "vds_max_v": 80,
+      "id_max_a": 120,
+      "rds_on_25c_ohm": 0.0025,
+      "rds_tempco_per_k": 0.0065,
+      "qgs_c": 15e-9,
+      "qgd_c": 10e-9,
+      "v_plateau_v": 4.5,
+      "rg_internal_ohm": 1.0,
+      "rth_jc_k_per_w": 0.9
+    },
+    "EXAMPLE-NFET-40V-1m2": {
+      "vds_max_v": 40,
+      "id_max_a": 200,
+      "rds_on_25c_ohm": 0.0012,
+      "rds_tempco_per_k": 0.007,
+      "qgs_c": 20e-9,
+      "qgd_c": 12e-9,
+      "v_plateau_v": 3.8,
+      "rg_internal_ohm": 1.2,
+      "rth_jc_k_per_w": 0.7
+    }
+  }
+}

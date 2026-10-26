@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "volt2motion"
+version = "0.1.0"
+description = "Simulate a robot joint from battery voltage to arm motion, then calibrate it on the built machine."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+    "mujoco>=3.2",
+    "numpy>=2.0",
+    "scipy>=1.13",
+    "matplotlib>=3.9",
+    "scikit-learn>=1.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/paperview/volt2motion"
+Documentation = "https://github.com/paperview/volt2motion/tree/main/docs"
+Issues = "https://github.com/paperview/volt2motion/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+volt2motion = "volt2motion.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["volt2motion*"]
+
+[tool.setuptools.package-data]
+volt2motion = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
